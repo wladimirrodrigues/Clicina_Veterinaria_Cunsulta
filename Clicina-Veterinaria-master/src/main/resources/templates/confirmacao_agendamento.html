@@ -13,10 +13,10 @@
         }
         .container {
             max-width: 600px;
-            margin: 20px auto;
+            margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         h1 {
@@ -28,21 +28,31 @@
         }
         .info {
             background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 20px;
+            border-radius: 10px;
             margin-top: 20px;
-        } .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
             text-decoration: none;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .btn:last-child {
+            margin-right: 0;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -55,10 +65,11 @@
         <p><strong>Data da Consulta:</strong> <span th:text="${consulta.dataConsulta}"></span></p>
         <p><strong>Nome do Dono:</strong> <span th:text="${consulta.nomeDono}"></span></p>
     </div>
-    <!-- Adicione o botão com link para a página de consultas agendadas -->
-    <button onclick="window.location.href='/consultas'" class="btn">Ver Consultas Agendadas</button>
-    <button onclick="window.location.href='/agendar'" class="btn">Agendar nova consulta</button>
-
+    <div class="btn-container">
+        <!-- botões com link para a página de consultas agendadas -->
+        <button onclick="window.location.href='/consultas'" class="btn">Ver Consultas Agendadas</button>
+        <button onclick="window.location.href='/agendar'" class="btn">Agendar nova consulta</button>
+    </div>
 </div>
 </body>
 </html>
