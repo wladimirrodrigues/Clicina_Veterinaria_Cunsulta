@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinária</title>
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6; /* Espaçamento entre as linhas */
+        }
+
+        /* Estilos para o cabeçalho personalizado */
+        header {
+            background-color: #145c7c; /* Cor de fundo verde clara */
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        /* Estilos para a imagem no cabeçalho */
+        header img {
+            width: 300px; /* Tamanho da imagem */
+            height: auto; /* Altura automática para manter a proporção */
+        }
+
+        /* Estilos para o cabeçalho */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px; /* Margem superior para afastar o título do topo */
+        }
+
+        h2 {
+            font-size: 3rem;
+             color: #145c7c; /* Cor do título */
+            font-size: 3rem; /* Tamanho do título */
+        }
+
+        /* Estilos para o parágrafo */
+        p {
+            text-align: left; /* Alinhar o texto à esquerda */
+            color: #555; /* Cor do texto */
+            margin-bottom: 30px; /* Margem inferior para espaçamento entre o texto e o botão */
+            line-height: 1.8; /* Espaçamento entre as linhas */
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Mudar a fonte */
+            font-size: 1.1rem; /* Tamanho da fonte */
+            font-weight: 400; /* Peso da fonte */
+            letter-spacing: 0.5px; /* Espaçamento entre caracteres */
+        }
+
+        /* Estilos para o botão */
+        button {
+            display: block; /* Para que o botão ocupe toda a largura do container */
+            margin: 0 auto; /* Centraliza o botão horizontalmente */
+            padding: 10px 20px; /* Padding para tornar o botão clicável */
+            background-color: #4CAF50; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            border: none; /* Remove a borda */
+            border-radius: 5px; /* Borda arredondada */
+            cursor: pointer; /* Altera o cursor para indicar que é clicável */
+            font-size: 16px; /* Tamanho da fonte */
+        }
+
+        /* Estilos para o botão quando hover (sobre o mouse) */
+        button:hover {
+            background-color: #45a049; /* Cor de fundo mais escura */
+        }
+
+        /* Estilos para o contêiner do main */
+        .main-container {
+            max-width: 1200px; /* Largura máxima do contêiner */
+            margin: 0 auto; /* Margens automáticas para centralizar */
+        }
+
+        /* Estilos para o conteúdo principal */
+        .sobre {
+            display: flex; /* Usar flexbox para alinhar conteúdo */
+            justify-content: center; /* Centralizar conteúdo horizontalmente */
+            align-items: center; /* Centralizar conteúdo verticalmente */
+            padding: 50px 20px; /* Espaçamento interno */
+        }
+
+        /* Estilos para o texto no conteúdo principal */
+        .sobre-text {
+            flex: 1; /* Ocupa o espaço restante */
+            padding-right: 20px; /* Espaçamento à direita */
+
+        }
+
+        /* Estilos para a imagem no conteúdo principal */
+        .sobre-image {
+            flex: 1; /* Ocupa o espaço restante */
+            text-align: center; /* Alinhar a imagem ao centro */
+        }
+
+        .sobre-image img {
+            width: 100%; /* Define a largura da imagem como 100% do contêiner pai */
+            max-width: 400px; /* Largura máxima da imagem */
+            height: auto; /* Altura automática para manter a proporção */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        }
+
+        /* Estilos para a seção de cards */
+        .card-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        /* Estilos para os cards */
+        .card {
+           margin: 0 10px;
+            width: 300px;
+            background-color: #a4d4e4; /* Cor de fundo */
+             border-radius: 10px;
+             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+             padding: 20px;
+             text-align: center;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Altera a fonte */
+        }
+        /* Estilos para o texto nos cards */
+        .card p {
+             color: #333; /* Cor do texto */
+             line-height: 1.6; /* Espaçamento entre as linhas */
+             text-align: left; /* Alinhar o texto à esquerda */
+         }
+        /* Estilos para as imagens nos cards */
+        .card img {
+            width: 30%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+
+        /* Estilos para a seção de consulta */
+        .consulta {
+            background-color: #ccf390; /* Cor de fundo */
+            display: flex; /* Usar flexbox para alinhar conteúdo */
+            justify-content: center; /* Centralizar conteúdo horizontalmente */
+            align-items: center; /* Centralizar conteúdo verticalmente */
+            padding: 50px; /* Espaçamento interno */
+            border-radius: 20px; /* Borda arredondada */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            margin-top: 80px; /* Margem superior */
+        }
+        .max-consulta{
+
+        }
+
+        /* Estilos para o texto e botão */
+        .texto-e-botao {
+            flex: 1; /* Ocupa metade do espaço disponível */
+            padding: 20px;
+            text-align: center; /* Centraliza o texto */
+            max-width: 800px
+
+        }
+
+        .texto-e-botao h2 {
+            color: #145c7c; /* Cor do título */
+            font-size: 2.5rem; /* Tamanho do título */
+            margin-bottom: 10px; /* Margem inferior */
+        }
+
+        .texto-e-botao p {
+            color: #333; /* Cor do texto */
+            font-size: 1.1rem; /* Tamanho do texto */
+            margin-bottom: 20px; /* Margem inferior */
+        }
+
+        .texto-e-botao button {
+            background-color: #145c7c; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Remove a borda */
+            padding: 20px 40px; /* Espaçamento interno do botão */
+            border-radius: 5px; /* Borda arredondada do botão */
+            font-size: 1.5rem; /* Tamanho do texto do botão */
+            cursor: pointer; /* Cursor ao passar por cima do botão */
+            transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+        }
+
+        .texto-e-botao button:hover {
+            background-color: #0d3d4b; /* Cor de fundo do botão ao passar o mouse */
+        }
+
+        /* Estilos para a imagem */
+        .imagem {
+            flex: 1; /* Ocupa metade do espaço disponível */
+            display: flex; /* Usar flexbox para alinhar conteúdo */
+
+        }
+
+        .imagem img {
+            max-width: 100%; /* Largura máxima da imagem */
+            max-height: 300px; /* Altura máxima da imagem */
+            border-radius: 20px; /* Borda arredondada */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        }
+       footer {
+            text-align: center; /* Alinha o texto ao centro */
+            background-color: #145c7c; /* Cor de fundo do rodapé */
+            padding: 10px 0; /* Espaçamento interno superior e inferior */
+            margin-top: 80px; /* Margem superior */
+        }
+
+        footer p {
+            color: #d4ffff; /* Cor do texto */
+            font-size: 1.5rem; /* Tamanho da fonte */
+            text-align: center; /* Alinha o texto ao centro */
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="img/logo.png" alt="Logo da Clínica Veterinária">
+</header>
+
+<div class="main-container">
+    <div class="sobre">
+        <div class="sobre-text">
+            <h2>Nossa Clínica</h2>
+            <p>Somos uma clínica veterinária dedicada ao bem-estar dos animais de estimação. Oferecemos uma variedade de serviços, incluindo consultas, vacinações, cirurgias e cuidados preventivos.</p>
+            <p>Nossa equipe de veterinários altamente qualificados está comprometida em fornecer cuidados compassivos e eficazes para os seus animais de estimação.</p>
+        </div>
+        <div class="sobre-image">
+            <img src="img/imagem3.jpg" alt="Veterinário examinando um gato">
+        </div>
+    </div>
+
+    <div class="card-section">
+        <div class="card">
+            <img src="img/icon2.png.webp" alt="Imagem do card 1">
+            <p>Oferecemos um compromisso contínuo com o bem-estar do seu pet. Disponibilizamos serviços de internação que requerem investigação diagnóstica ou monitoramento intensivo..</p>
+        </div>
+        <div class="card">
+            <img src="img/icon3.png.webp" alt="Imagem do card 2">
+            <p>Realizamos uma ampla variedade de exames diagnósticos para garantir a saúde e o bem-estar do seu pet. Conte com nossa equipe para cuidar da saúde do seu amigo peludo.</p>
+        </div>
+        <div class="card">
+            <img src="img/icon4.png.webp" alt="Imagem do card 3">
+            <p> Oferecemos programas abrangentes de cuidados preventivos, incluindo vacinações, desparasitação e check-ups regulares para garantir a saúde contínua do seu pet.</p>
+        </div>
+    </div>
+    <section class="consulta">
+
+        <div class="texto-e-botao">
+            <h2>Agendamento de Consulta</h2>
+            <p>Agende uma consulta para o seu pet agora mesmo!</p>
+            <button id="agendarButton">Agendar Consulta</button>
+        </div>
+        <div class="imagem">
+            <img src="img/imagem1.jpg" alt="Imagem de consulta">
+        </div>
+
+    </section>
+
+</div>
+<footer>
+    <p>Desenvolvido por wlad</p>
+</footer>
+
+
+<script>
+    // Adiciona um evento de clique ao botão
+    document.getElementById("agendarButton").addEventListener("click", function() {
+        // Redireciona para a página de agendamento
+        window.location.href = "/agendar";
+    });
+</script>
+</body>
+</html>
