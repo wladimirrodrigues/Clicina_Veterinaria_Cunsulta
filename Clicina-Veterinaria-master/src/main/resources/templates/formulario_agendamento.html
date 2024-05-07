@@ -42,7 +42,7 @@
         color: #555;
     }
 
-    input[type="text"], input[type="submit"] {
+    input[type="text"], input[type="time"], input[type="submit"] {
         padding: 10px;
         margin-bottom: 10px;
         border: none;
@@ -88,6 +88,9 @@
         <label for="dataConsulta">Data da Consulta:</label><br>
         <input type="text" id="dataConsulta" name="dataConsulta" class="datepicker" required><br><br>
 
+        <label for="horaConsulta">Hora da Consulta:</label><br>
+        <input type="time" id="horaConsulta" name="horaConsulta" required><br><br>
+
         <input type="submit" value="Agendar Consulta">
     </form>
 </div>
@@ -103,8 +106,9 @@
         var nomePet = document.getElementById('nomePet').value;
         var especie = document.getElementById('especie').value;
         var dataConsulta = document.getElementById('dataConsulta').value;
+        var horaConsulta = document.getElementById('horaConsulta').value;
 
-        if (nomeDono === "" || cpf === "" || nomePet === "" || especie === "" || dataConsulta === "") {
+        if (nomeDono === "" || cpf === "" || nomePet === "" || especie === "" || dataConsulta === "" || horaConsulta === "") {
             alert("Por favor, preencha todos os campos.");
             return false;
         }

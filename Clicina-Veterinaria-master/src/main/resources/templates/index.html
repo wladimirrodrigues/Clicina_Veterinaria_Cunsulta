@@ -23,7 +23,7 @@
 
         /* Estilos para a imagem no cabeçalho */
         header img {
-            width: 300px; /* Tamanho da imagem */
+            width: 400px; /* Tamanho da imagem */
             height: auto; /* Altura automática para manter a proporção */
         }
 
@@ -47,8 +47,8 @@
             margin-bottom: 30px; /* Margem inferior para espaçamento entre o texto e o botão */
             line-height: 1.8; /* Espaçamento entre as linhas */
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Mudar a fonte */
-            font-size: 1.1rem; /* Tamanho da fonte */
-            font-weight: 400; /* Peso da fonte */
+            font-size: 1.2rem; /* Tamanho da fonte */
+            font-weight: 500; /* Peso da fonte */
             letter-spacing: 0.5px; /* Espaçamento entre caracteres */
         }
 
@@ -137,6 +137,128 @@
             margin-bottom: 20px;
         }
 
+        /* Estilos para o carrosel de imagens*/
+        .carrosel-section {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin: 70px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .carrosel-container {
+            display: flex;
+            width: calc(10% * 16); /* 8 imagens */
+            padding: 20px;
+            animation: carrosel-animation 50s infinite linear;
+        }
+
+        .carrosel-container img {
+           width: calc(40% - 10px); /* 10% da largura menos 10px de margem */
+           height: 350px; /* Altura fixa */
+           object-fit: cover; /* Mantém a proporção da imagem */
+           margin-right: 10px; /* Espaçamento entre as imagens */
+           border-radius: 10px; /* Bordas arredondadas */
+           box-shadow: 0 4px 8px rgba(1, 3, 5, 0.2); /* Sombreamento */
+           box-sizing: border-box; /* Inclui bordas e margens no cálculo de largura */
+        }
+
+        @keyframes carrosel-animation {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+       /* Estilos para a seção de Depoimentos de Clientes */
+        .depoimento{
+            display: flex; /* Alinha os depoimentos horizontalmente */
+            justify-content: center; /* Centraliza os depoimentos horizontalmente */
+            margin-top: 50px; /* Margem superior */
+        }
+
+        /* Estilos para o texto nos depoimentos */
+        .depoimento p {
+            color: #333; /* Cor do texto */
+            line-height: 1.6; /* Espaçamento entre as linhas */
+            text-align: left; /* Alinhamento do texto */
+            margin-bottom: 20px; /* Margem inferior */
+        }
+
+        /* Estilos para as imagens nos depoimentos */
+
+        .depoimento img {
+              width: 80px; /* Define a largura da imagem */
+              height: auto; /* Altura automática para manter a proporção */
+              border-radius: 10%; /* Borda arredondada para tornar a imagem circular */
+              margin-right: 20px; /* Margem à direita para separar a imagem do texto */
+        }
+        .nome-cliente {
+                margin-top: 5px; /* Margem superior para separar o nome do depoimento */
+                color: #145c7c; /* Nova cor do texto */
+        }
+        .client-name {
+                font-size:1.3rem;
+                color: #145c7c; /* Nova cor do texto */
+        }
+
+        /* Estilos para a seção de Contato */
+
+        .contato {
+            background-color: #a4d4e4; /* Cor de fundo alternativa */
+            padding: 20px; /* Espaçamento interno reduzido */
+            border-radius: 15px; /* Borda arredondada */
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            margin-top: 50px; /* Margem superior reduzida */
+        }
+
+        .contato h2 {
+            text-align: center;
+            color: #145c7c; /* Cor do título */
+            font-size: 2rem; /* Tamanho do título reduzido */
+            margin-bottom: 15px; /* Margem inferior reduzida */
+        }
+
+        .contato form {
+            display: flex; /* Usar flexbox para alinhar os elementos do formulário */
+            flex-direction: column; /* Alinhar os elementos em uma coluna */
+            max-width: 500px; /* Largura máxima do formulário reduzida */
+            margin: 0 auto; /* Centralizar o formulário na horizontal */
+        }
+
+        .contato label {
+            color: #333; /* Cor do texto */
+            font-size: 1.1rem; /* Tamanho do texto reduzido */
+            margin-bottom: 8px; /* Margem inferior reduzida */
+        }
+
+        .contato input,
+        .contato textarea {
+            padding: 8px; /* Espaçamento interno reduzido */
+            margin-bottom: 15px; /* Margem inferior reduzida */
+            border-radius: 5px; /* Borda arredondada */
+            border: 1px solid #ccc; /* Borda com cor cinza */
+        }
+
+        .contato textarea {
+            height: 80px; /* Altura do campo de texto reduzida */
+        }
+
+        .contato button {
+            background-color: #145c7c; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Remove a borda */
+            padding: 12px 25px; /* Espaçamento interno do botão reduzido */
+            border-radius: 5px; /* Borda arredondada do botão */
+            font-size: 1.3rem; /* Tamanho do texto do botão reduzido */
+            cursor: pointer; /* Cursor ao passar por cima do botão */
+            transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+        }
+
+        .contato button:hover {
+            background-color: #0d3d4b; /* Cor de fundo do botão ao passar o mouse */
+        }
+
+
 
         /* Estilos para a seção de consulta */
         .consulta {
@@ -214,6 +336,12 @@
             font-size: 1.5rem; /* Tamanho da fonte */
             text-align: center; /* Alinha o texto ao centro */
         }
+        .redes-sociais img {
+            width: 30px; /* Defina o tamanho desejado para os ícones das redes sociais */
+            height: auto; /* Mantenha a proporção da imagem */
+            margin-right: 10px; /* Adicione uma margem à direita para separar os ícones */
+        }
+
 
 
     </style>
@@ -249,6 +377,67 @@
             <p> Oferecemos programas abrangentes de cuidados preventivos, incluindo vacinações, desparasitação e check-ups regulares para garantir a saúde contínua do seu pet.</p>
         </div>
     </div>
+
+    <!-- Carrosel de Imagens -->
+    <div class="carrosel-section">
+        <div class="carrosel-container">
+            <img src="img/1cc1f447-c17e-4bf7-946a-0591d447afcb.jpg" alt="Imagem do Carrosel 1">
+            <img src="img/Ces%20animaux%20à%20l’aspect%20insolite%20ont%20gagné%20le%20jackpot%20génétique.jpg" alt="Imagem do Carrosel 2">
+            <img src="img/Cursos%20Ecografía%20Veterinaria.jpg" alt="Imagem do Carrosel 3">
+            <img src="img/Gatito%20blanco%20visitando%20al%20veterinario%20para%20el%20chequeo_%20_%20Foto%20Premium.jpg" alt="Imagem do Carrosel 4">
+            <img src="img/La%20mano%20del%20veterinario%20en%20el%20perro%20enfermo%20acostado%20en%20la%20mesa%20en%20la%20clínica%20_%20Foto%20Premium.jpg" alt="Imagem do Carrosel 5">
+            <img src="img/Médico%20veterinário%20na%20clínica%20veterinária%20com%20cão%20Husky%20siberiano%20_%20Foto%20Premium.jpg" alt="Imagem do Carrosel 6">
+            <img src="img/Mira%20la%20graciosa%20reacción%20de%20una%20gatita%20al%20enterarse%20de%20que%20¡está%20embarazada!.jpg" alt="Imagem do Carrosel 7">
+            <img src="img/Phenobarbital%20Overdose%20in%20Dogs%20_%20Cuteness.jpg" alt="Imagem do Carrosel 8">
+            <!-- Duplicar imagens para loop contínuo -->
+            <img src="img/1cc1f447-c17e-4bf7-946a-0591d447afcb.jpg" alt="Imagem do Carrosel 1">
+            <img src="img/Ces%20animaux%20à%20l’aspect%20insolite%20ont%20gagné%20le%20jackpot%20génétique.jpg" alt="Imagem do Carrosel 2">
+            <img src="img/Cursos%20Ecografía%20Veterinaria.jpg" alt="Imagem do Carrosel 3">
+            <img src="img/Gatito%20blanco%20visitando%20al%20veterinario%20para%20el%20chequeo_%20_%20Foto%20Premium.jpg" alt="Imagem do Carrosel 4">
+            <img src="img/La%20mano%20del%20veterinario%20en%20el%20perro%20enfermo%20acostado%20en%20la%20mesa%20en%20la%20clínica%20_%20Foto%20Premium.jpg" alt="Imagem do Carrosel 5">
+            <img src="img/Médico%20veterinário%20na%20clínica%20veterinária%20com%20cão%20Husky%20siberiano%20_%20Foto%20Premium.jpg" alt="Imagem do Carrosel 6">
+            <img src="img/Mira%20la%20graciosa%20reacción%20de%20una%20gatita%20al%20enterarse%20de%20que%20¡está%20embarazada!.jpg" alt="Imagem do Carrosel 7">
+            <img src="img/Phenobarbital%20Overdose%20in%20Dogs%20_%20Cuteness.jpg" alt="Imagem do Carrosel 8">
+        </div>
+    </div>
+
+    <!-- Depoimentos de Clientes -->
+    <div class="depoimentos">
+        <h2>Depoimentos de Clientes</h2>
+        <div class="depoimento">
+            <img src="img/avaliacao-do-cliente.png" alt="Foto do Cliente 1">
+            <p>"A clínica veterinária foi incrível! Eles trataram meu animal de estimação com tanto cuidado e profissionalismo. Recomendo fortemente!"</p>
+            <p class="nome-cliente">- <span class="client-name">Maria Silva</span></p>
+        </div>
+        <div class="depoimento">
+            <img src="img/avaliacao-do-cliente.png" alt="Foto do Cliente 2">
+            <p>"Estou muito satisfeito com os serviços da clínica veterinária. A equipe é muito atenciosa e prestativa. Meu animal de estimação sempre recebe o melhor cuidado lá!"</p>
+            <p class="nome-cliente">- <span class="client-name">João Santos</span></p>
+        </div>
+        <div class="depoimento">
+            <img src="img/avaliacao-do-cliente.png" alt="Foto do Cliente 3">
+            <p>"Não consigo imaginar levar meu animal de estimação a outro lugar. A clínica veterinária oferece um serviço excepcional e os veterinários são muito experientes."</p>
+            <p class="nome-cliente">- <span class="client-name">Ana Oliveira</span></p>
+        </div>
+    </div>
+
+    <section class="contato">
+        <h2>Entre em Contato</h2>
+        <form action="/enviar-contato" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+
     <section class="consulta">
 
         <div class="texto-e-botao">
@@ -264,8 +453,15 @@
 
 </div>
 <footer>
-    <p>Desenvolvido por wlad</p>
+    <div class="redes-sociais">
+        <a href="https://www.facebook.com/suaclinica" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/suaclinica" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+        <!-- Adicione mais links para outras redes sociais, se desejar -->
+    </div>
+    <p>Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
+    <p>Desenvolvido com propósitos educativos.</p>
 </footer>
+
 
 
 <script>
