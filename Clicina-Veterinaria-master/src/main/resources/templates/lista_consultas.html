@@ -17,7 +17,7 @@
             color: #333;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             background-color: #f2f2f2;
@@ -52,19 +52,21 @@
 <body>
 <h1>Lista de Consultas Agendadas</h1>
 <div class="container">
-<table>
-    <tr>
-        <th>Nome do Pet</th>
-        <th>Data da Consulta</th>
-        <th>Nome do Dono</th>
-    </tr>
-    <!-- Aqui você pode iterar sobre a lista de consultas e exibir cada uma como uma linha na tabela -->
-    <tr th:each="consulta : ${consultas}">
-        <td th:text="${consulta.nomePet}"></td>
-        <td th:text="${consulta.dataConsulta}"></td>
-        <td th:text="${consulta.nomeDono}"></td>
-    </tr>
-</table>
+    <table>
+        <tr>
+            <th>Nome do Pet</th>
+            <th>Data da Consulta</th>
+            <th>Hora da Consulta</th>
+            <th>Nome do Dono</th>
+        </tr>
+        <!-- Itera sobre a lista de consultas e exibe cada uma como uma linha na tabela -->
+        <tr th:each="consulta : ${consultas}">
+            <td th:text="${consulta.nomePet}"></td>
+            <td th:text="${consulta.dataConsulta}"></td>
+            <td th:text="${consulta.horaConsulta}"></td> <!-- Adicionando hora da consulta -->
+            <td th:text="${consulta.nomeDono}"></td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>

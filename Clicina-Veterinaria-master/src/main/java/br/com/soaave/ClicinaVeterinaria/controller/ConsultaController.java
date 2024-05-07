@@ -25,9 +25,10 @@ public class ConsultaController {
     public String processarFormularioAgendamento(@RequestParam String nomePet,
                                                  @RequestParam String dataConsulta,
                                                  @RequestParam String nomeDono,
+                                                 @RequestParam String horaConsulta,
                                                  Model model) {
 
-        Consulta consulta = consultaService.agendarConsulta(nomePet, dataConsulta, nomeDono);
+        Consulta consulta = consultaService.agendarConsulta(nomePet, dataConsulta, nomeDono,horaConsulta);
         model.addAttribute("consulta", consulta);
         return "confirmacao_agendamento";
     }

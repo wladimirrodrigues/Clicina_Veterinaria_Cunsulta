@@ -14,14 +14,14 @@ public class ConsultaService {
 
 
     // Método para agendar uma nova consulta
-    public Consulta agendarConsulta(String nomePet, String dataConsulta, String nomeDono) {
-        Consulta novaConsulta = new Consulta(nomePet, dataConsulta, nomeDono);
+    public Consulta agendarConsulta(String nomePet, String dataConsulta, String nomeDono, String horaConsulta) {
+        Consulta novaConsulta = new Consulta(nomePet, dataConsulta, horaConsulta, nomeDono);
         consultas.add(novaConsulta);
         return novaConsulta;
     }
 
     // Método para obter todas as consultas agendadas
     public List<Consulta> listarConsultas() {
-        return consultas ;
+        return consultas;
     }
 }
