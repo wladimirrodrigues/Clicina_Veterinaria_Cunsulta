@@ -15,7 +15,7 @@ public class ConsultaService {
 
     // Método para agendar uma nova consulta
     public Consulta agendarConsulta(String nomePet, String dataConsulta, String nomeDono, String horaConsulta) {
-        Consulta novaConsulta = new Consulta(nomePet, dataConsulta, horaConsulta, nomeDono);
+        Consulta novaConsulta = new Consulta(nomePet, dataConsulta, horaConsulta);
         consultas.add(novaConsulta);
         return novaConsulta;
     }
